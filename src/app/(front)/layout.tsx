@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Prompt } from "next/font/google";
 import "../globals.css";
+import Navbar from "@/components/navbar";
 
 export const promptFont = Prompt({
   weight: ["400", "500", "700"],
@@ -33,8 +34,7 @@ export default function RootLayout({
       lang="th"
     >
       <body className={promptFont.className}>
-        <h1 className="text-4xl">สวัสดี header 2</h1>
-        <hr />
+        <Navbar />
         {children}
       </body>
     </html>
