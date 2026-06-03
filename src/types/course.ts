@@ -8,9 +8,9 @@ export interface Course {
 }
 
 export interface CourseResponse {
-    data: Course();
+    data: Course [];
     meta: {
         status: string;
         status_code: number;
-    }
+    };
 }
