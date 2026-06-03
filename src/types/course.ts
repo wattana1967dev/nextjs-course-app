@@ -1,7 +1,7 @@
 export interface Course {
     id: number;
     title: string;
-    default: string;
+    detail: string;
     date: string;
     view: number;
     picture: string;
