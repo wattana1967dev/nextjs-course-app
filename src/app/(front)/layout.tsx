@@ -1,3 +1,6 @@
+// http://localhost:3000/course
+// เอา (front) layout.tsx มาเป็น url
+
 import type { Metadata } from "next";
 import { Prompt } from "next/font/google";
 import "../globals.css";
@@ -21,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="th" suppressHydrationWarning>
+      lang="th">
       <body className="{promptFont.className}">
         <Navbar />
         {children}
