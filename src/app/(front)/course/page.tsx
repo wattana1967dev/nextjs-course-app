@@ -1,5 +1,9 @@
 import Image from "next/image";
 import type { CourseResponse } from "@/types/course";
+import Features from "@/components/features";
+import Link from "next/link";
+import { Spinner } from "@/components/ui/spinner";
+import { Button } from "@/components/ui/button";
 
 async function getCourses() {
   const res = await fetch("https://api.codingthailand.com/api/course", {
@@ -15,6 +19,7 @@ async function getCourses() {
   return result.data.filter((course) => course.id && course.title);
 }
 
+// สร้างหน้าเพจ CoursePage
 export default async function CoursePage() {
   const courses = await getCourses();
 
@@ -54,6 +59,11 @@ export default async function CoursePage() {
             </div>
           </article>
         ))}
+        <Spinner />
+        <hr />
+        <Button variant="link">
+          <Link href="/">Home</Link>
+        </Button>
       </section>
     </main>
   );
